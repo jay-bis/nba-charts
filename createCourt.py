@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jan  9 13:59:45 2019
-
 @author: Jack Biscupski
 """
-
 from matplotlib.patches import Circle, Rectangle, Arc
 import matplotlib.pyplot as plt
 
@@ -12,7 +10,7 @@ def create_court(ax=None, color='black', linewidth=2):
     if ax is None:
         ax = plt.gca()
         
-    hoop = Circle((0, 0), radius=7.7, linewidth=linewidth, color=color, fill=False)
+    hoop = Circle((0, 0), radius=7.5, linewidth=linewidth, color=color, fill=False)
     
     backboard = Rectangle((-30, -7.5), 60, -1, linewidth=linewidth, color=color)
     
@@ -53,8 +51,8 @@ def create_court(ax=None, color='black', linewidth=2):
     
     return ax
     
-plt.figure(figsize=(12,11))
-create_court()
-plt.xlim(-300,300)
-plt.ylim(-100,500)
-plt.show()    
+#plt.figure(figsize=(12,11))
+#create_court()
+#plt.xlim(-300,300)
+#plt.ylim(-100,500)
+#plt.show()    
