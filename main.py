@@ -11,7 +11,13 @@ def home():
 
 @app.route("/route")
 def route():
-    return render_template("route.html")
+    user = {"username": "Jack"}
+    return render_template("route.html", user=user, title="New")
+
+@app.route("/harden")
+def harden():
+    player = {"name": "James Harden"}
+    return render_template("harden.html", user=player)
 
 if __name__ == "__main__":
     app.run(debug=True)
